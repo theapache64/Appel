@@ -7,9 +7,16 @@ import android.content.Context;
  */
 public class Schedule extends BaseTable {
 
-    //TODO: Build it as a singleton class.
+    private static Schedule instance;
 
     private Schedule(Context context) {
         super(context);
+    }
+
+    public static Schedule getInstance(final Context context) {
+        if (instance == null) {
+            instance = new Schedule(context);
+        }
+        return instance
     }
 }
