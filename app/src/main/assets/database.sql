@@ -4,5 +4,6 @@ CREATE TABLE schedule(
 	call_count_min_range INT NOT NULL DEFAULT 0,
 	call_count_max_range INT NOT NULL DEFAULT 0,
 	is_active INTEGER CHECK ( is_active IN (0,1)) NOT NULL DEFAULT 1,
-	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	UNIQUE KEY(phone)
 );
